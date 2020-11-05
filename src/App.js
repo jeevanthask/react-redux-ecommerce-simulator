@@ -12,7 +12,7 @@ class App extends React.Component {
                     </div>
                 </div>
 
-                <div className="row countrrow">
+                <div className="row">
                     <div className="col-md-12">
                         <Counter/>
                     </div>
