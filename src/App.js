@@ -6,8 +6,19 @@ class App extends React.Component {
     render() {
         return (
             <div className="container-fluid">
-                <Navbar/>
-                <Counter/>
+                <div className="row">
+                    <div className="col-md-12">
+                        <Navbar/>
+                    </div>
+                </div>
+
+                <div className="row countrrow">
+                    <div className="col-md-12">
+                        <Counter/>
+                    </div>
+                </div>
+
+
             </div>
         )
     }
