@@ -1,6 +1,8 @@
 import React from 'react'
 import Counter from "./components/counter/counter.component";
 import Navbar from "./components/navbar/navbar.component";
+import Counters from "./components/counters/counters.component";
+
 
 class App extends React.Component {
     render() {
@@ -14,7 +16,7 @@ class App extends React.Component {
 
                 <div className="row">
                     <div className="col-md-12">
-                        <Counter/>
+                        <Counters/>
                     </div>
                 </div>
 
