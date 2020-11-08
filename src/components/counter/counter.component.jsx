@@ -3,10 +3,10 @@ import './counter.component.css'
 
 class Counter extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            count: 0
+            count: props.count
         }
     }
 
@@ -24,23 +24,27 @@ class Counter extends React.Component {
     }
 
     renderCountValue = () => {
-        if (this.state.count == 0) {
+        if (this.state.count === 0) {
             return 'Zero'
         }
         return this.state.count
     }
 
     changeCountColor = () => {
-        if (this.state.count == 0) {
+        if (this.state.count === 0) {
             return "badge badge-pill badge-warning p-2"
         }
         return "badge badge-pill badge-primary p-2"
     }
 
+    onClickDelete = () => {
+
+    }
+
     render() {
         return (
             <div className="counterdiv">
-                <span class={this.changeCountColor()}>{this.renderCountValue()}</span>
+                <span className={this.changeCountColor()}>{this.renderCountValue()}</span>
                 <button className="btn btn-primary" onClick={this.incrementCount}>Increment</button>
                 <button className="btn btn-warning" onClick={this.decrementCount}>Decrement</button>
                 <button className="btn btn-danger">Delete</button>
